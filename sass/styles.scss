@@ -1,22 +1,26 @@
 @charset "UTF-8";
 
+@import "compass/css3";
+@import "respond_to";
+@import "normalize";
+
 @font-face {
     font-family: "Extra";
-    src: url(HANNOMMoEExtra-Regular.otf) format("truetype"), url(HANNOMMoEExtra-Regular.woff) format("woff");
+    src: font-url("HANNOMMoEExtra-Regular.otf") format("truetype"), font-url("HANNOMMoEExtra-Regular.woff") format("woff");
 }
 
 
 @font-face {
     font-family: "Subset";
-    src: url(HannomMoeSubset.otf) format("truetype"), url(HannomMoeSubset.woff) format("woff");
+    src: font-url("HannomMoeSubset.otf") format("truetype"), font-url("HannomMoeSubset.woff") format("woff");
 }
 
-
 body {
-    background: #eeeeee url('background.jpg');
+    background: #eeeeee image-url('background.jpg');
     font-family: sans-serif, "Subset", "Extra", "HAN NOM A", "HAN NOM B";
     font-size: 14pt;
     line-height: 140%;
+    margin: 10px;
 }
 
 .title {
@@ -65,12 +69,14 @@ center {
     border: 1px solid #dddddd;
     margin-bottom: 50pt;
     padding: 5px 10px;
-    margin-left: 1%;
-    margin-right: 1%;
     height: auto;
     background: #ffffff;
     border-radius: 10px;
     word-break: break-all;
+    @include respond-to(big) {
+        margin-left: 240px;
+    }
+
 }
 
 #query-box {
@@ -78,6 +84,12 @@ center {
     bottom: 5px;
     left: 10px;
     right: 10px;
+    @include respond-to(big) {
+        top: 10px;
+        left: 10px;
+        right: auto;
+        width: 220px;
+    }
 }
 
 #query {
@@ -139,6 +151,14 @@ img {
     height: auto !important;
     position: fixed !important;
     bottom: 52px !important;
+    @include box-sizing(border-box);
+    @include respond-to(big) {
+        display: block !important;
+        top: 62px !important;
+        bottom: auto !important;
+        left: 10px !important;
+        width: 220px !important;
+    }
 }
 
 .cordova .ui-autocomplete {
