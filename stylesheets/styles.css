@@ -1,149 +1,165 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 @font-face {
-    font-family: "Extra";
-    src: url(HANNOMMoEExtra-Regular.otf) format("truetype"),
-         url(HANNOMMoEExtra-Regular.woff) format("woff");
+  font-family: "Extra";
+  src: url(HANNOMMoEExtra-Regular.otf) format("truetype"), url(HANNOMMoEExtra-Regular.woff) format("woff");
 }
+
 @font-face {
-    font-family: "Subset";
-    src: url(HannomMoeSubset.otf) format("truetype"),
-         url(HannomMoeSubset.woff) format("woff");
+  font-family: "Subset";
+  src: url(HannomMoeSubset.otf) format("truetype"), url(HannomMoeSubset.woff) format("woff");
 }
+
 body {
-    background: #eee url('background.jpg');
-    font-family: sans-serif, "Subset", "Extra", "HAN NOM A", "HAN NOM B";
-    font-size: 14pt;
-    line-height: 140%;
+  background: #eeeeee url("background.jpg");
+  font-family: sans-serif, "Subset", "Extra", "HAN NOM A", "HAN NOM B";
+  font-size: 14pt;
+  line-height: 140%;
 }
+
 .title {
-    font-size: 26pt;
-    line-height: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  font-size: 26pt;
+  line-height: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 501;
+  font-family: "全字庫正宋體", "TW-Sung-98_1", "教育部標準宋體", "CMEXa1", "新細明體", "PMingLiU", "MingLiU", "全字庫正楷體", "TW-Kai-98_1", "教育部標準楷書", "kai-pc", "CMEXc1", "標楷體", "BiauKai", "DFKaiShu-SB-Estd-BF", sans-serif, "Subset", "Extra", "HAN NOM A", "HAN NOM B";
 }
-.title, .bopomofo {
-    font-weight: 501;
-    font-family: "全字庫正宋體", "TW-Sung-98_1",
-                 "教育部標準宋體", "CMEXa1",
-                 "新細明體", "PMingLiU", "MingLiU",
-                 "全字庫正楷體", "TW-Kai-98_1",
-                 "教育部標準楷書", "kai-pc", "CMEXc1",
-                 "標楷體", "BiauKai", "DFKaiShu-SB-Estd-BF",
-                 sans-serif, "Subset", "Extra", "HAN NOM A", "HAN NOM B";
+
+.bopomofo {
+  font-weight: 501;
+  font-family: "全字庫正宋體", "TW-Sung-98_1", "教育部標準宋體", "CMEXa1", "新細明體", "PMingLiU", "MingLiU", "全字庫正楷體", "TW-Kai-98_1", "教育部標準楷書", "kai-pc", "CMEXc1", "標楷體", "BiauKai", "DFKaiShu-SB-Estd-BF", sans-serif, "Subset", "Extra", "HAN NOM A", "HAN NOM B";
 }
-h3 { font-size: 100%; }
+
+h3 {
+  font-size: 100%;
+}
+
 a {
-    color: black !important;
-    text-decoration: none !important;
+  color: black !important;
+  text-decoration: none !important;
 }
 a:hover {
-    color: #009;
-    text-decoration: underline !important;
+  color: #009;
+  text-decoration: underline !important;
 }
+
 .part-of-speech a {
-    color: white !important;
+  color: white !important;
 }
 .part-of-speech a:hover {
-    color: white;
-    background: #aaf;
-    text-decoration: none;
-    border-radius: 5px;
+  color: white;
+  background: #aaf;
+  text-decoration: none;
+  border-radius: 5px;
 }
+
 center {
-    padding: 15px;
+  padding: 15px;
 }
+
 #result {
-    box-shadow: 1px 1px 3px 0px #999;
-    border: 1px solid #ddd;
-    margin-bottom: 50pt;
-    padding: 5px 10px;
-    margin-left: 1%;
-    margin-right: 1%;
-    height: auto;
-    background: #ffffff;
-    border-radius: 10px;
-    word-break: break-all;
+  box-shadow: 1px 1px 3px 0px #999999;
+  border: 1px solid #dddddd;
+  margin-bottom: 50pt;
+  padding: 5px 10px;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  word-break: break-all;
 }
+
 #query-box {
-    position: fixed;
-    bottom: 5px;
-    left: 10px;
-    right: 10px;
+  position: fixed;
+  bottom: 5px;
+  left: 10px;
+  right: 10px;
 }
+
 #query {
-    height: 36pt;
-    font-size: 16pt;
-    padding: 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    width: 100%;
+  height: 36pt;
+  font-size: 16pt;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
 }
-.title {
-}
+
 .bopomofo {
-    display: block;
-    margin-top: -14px;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    color: gray;
-    font-size: 80%;
-    border-bottom: 1px dotted #eee;
+  display: block;
+  margin-top: -14px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  color: gray;
+  font-size: 80%;
+  border-bottom: 1px dotted #eeeeee;
 }
+
 span .tone {
-    position: relative;
-    float: right;
-    left: 10px;
-    top: -6px;
-    font-size: 120%;
+  position: relative;
+  float: right;
+  left: 10px;
+  top: -6px;
+  font-size: 120%;
 }
+
 .part-of-speech {
-    color: white;
-    background-color: #555;
-    border-radius: 3px;
-    padding: 1px 2px 1px 2px;
-    /*border: 1px solid black;*/
-    font-size: 100%;
+  color: white;
+  background-color: #555;
+  border-radius: 3px;
+  padding: 1px 2px 1px 2px;
+  /*border: 1px solid black;*/
+  font-size: 100%;
 }
+
 img.logo {
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px 0px #999;
-    max-height: 100px;
-    max-width: 100px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 0px #999999;
+  max-height: 100px;
+  max-width: 100px;
 }
 img.quit {
-    position: fixed;
-    top: 10pt;
-    right: 10pt;
+  position: fixed;
+  top: 10pt;
+  right: 10pt;
 }
+
 .ui-autocomplete {
-    max-height: 60%;
-    overflow: auto;
-    top: auto !important;
-    height: auto !important;
-    position: fixed !important;
-    bottom: 52px !important;
+  max-height: 60%;
+  overflow: auto;
+  top: auto !important;
+  height: auto !important;
+  position: fixed !important;
+  bottom: 52px !important;
 }
+
 .cordova .ui-autocomplete {
-    max-height: 80% !important;
+  max-height: 80% !important;
 }
+
 .example {
-    font-size: 13pt;
+  font-size: 13pt;
 }
+
 .quote {
-    clear: both;
-    display: block;
-    font-size: 13pt;
+  clear: both;
+  display: block;
+  font-size: 13pt;
 }
+
 .link, .def {
-    clear: both;
-    display: block;
+  clear: both;
+  display: block;
 }
+
 span a {
-    border: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
 .entry {
-    padding-bottom: 5px;
-    border-bottom: 1px ridge #ddd;
+  padding-bottom: 5px;
+  border-bottom: 1px ridge #dddddd;
 }
