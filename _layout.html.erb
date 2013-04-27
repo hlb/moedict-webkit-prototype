@@ -4,13 +4,18 @@
     <title>3du.tw 萌典測試版</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta content="IE=edge,chrome=IE9" http-equiv="X-UA-Compatible">
-    <link href="stylesheets/cupertino/jquery-ui-1.10.0.custom.css" rel="stylesheet">
     <link href="stylesheets/styles.css" rel="stylesheet">
-    <script src="js/jquery-1.9.0.min.js"></script>
-    <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="main.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap-alert.js"></script>
+    <script src="/javascripts/bootstrap-button.js"></script>
+    <script src="/javascripts/bootstrap-dropdown.js"></script>
+    <script src="/javascripts/bootstrap-modal.js"></script>
+    <script src="/javascripts/bootstrap-tooltip.js"></script>
+    <script src="/javascripts/bootstrap-popover.js"></script>
+    <script src="/javascripts/bootstrap-transition.js"></script>
+    <%= livereload_js unless ENV["RACK_ENV"] == "production" %>
 </head>
-<body onload="doLoad()" onhashchange="grokHash()" style="zoom: 1;">
+<body>
     <%= yield %>
 </body>
 </html>
